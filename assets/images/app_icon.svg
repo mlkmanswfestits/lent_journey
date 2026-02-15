@@ -1,0 +1,53 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4B0082;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E004F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F7E98E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#AA8C2C;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="512" cy="512" r="500" fill="url(#purpleGrad)" />
+  
+  <!-- Outer Gold Border -->
+  <circle cx="512" cy="512" r="480" fill="none" stroke="url(#goldGrad)" stroke-width="40" />
+  <circle cx="512" cy="512" r="440" fill="none" stroke="#8B0000" stroke-width="5" opacity="0.5" />
+  
+  <!-- Decorative Rays -->
+  <g stroke="url(#goldGrad)" stroke-width="2" opacity="0.3">
+    <line x1="512" y1="112" x2="512" y2="912" />
+    <line x1="112" y1="512" x2="912" y2="512" />
+    <line x1="229" y1="229" x2="795" y2="795" />
+    <line x1="795" y1="229" x2="229" y2="795" />
+  </g>
+
+  <!-- The Cross -->
+  <g transform="translate(512, 512)">
+    <!-- Vertical Bar -->
+    <path d="M-60,-350 L60,-350 L60,350 L-60,350 Z" fill="url(#goldGrad)" filter="url(#glow)" />
+    <!-- Horizontal Bar -->
+    <path d="M-250,-60 L250,-60 L250,60 L-250,60 Z" fill="url(#goldGrad)" filter="url(#glow)" />
+    
+    <!-- Inner Crimson Cross -->
+    <path d="M-40,-330 L40,-330 L40,330 L-40,330 Z" fill="#8B0000" />
+    <path d="M-230,-40 L230,-40 L230,40 L-230,40 Z" fill="#8B0000" />
+    
+    <!-- Central Motif (Crown of Thorns stylized) -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="url(#goldGrad)" stroke-width="10" />
+    <circle cx="0" cy="0" r="60" fill="#4B0082" />
+    <path d="M-30,-30 L30,30 M30,-30 L-30,30" stroke="url(#goldGrad)" stroke-width="5" />
+  </g>
+  
+  <!-- Halo/Glow effect -->
+  <circle cx="512" cy="512" r="200" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="10,10" opacity="0.5" />
+  
+</svg>
